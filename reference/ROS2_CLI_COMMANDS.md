@@ -36,7 +36,7 @@
     ros2 param set /node_name param value
 
 ## Messages
-ros2 interface show geometry_msgs/msg/PoseStamped
+    ros2 interface show geometry_msgs/msg/PoseStamped
 
 ## Foxglove
-ros2 run foxglove_bridge foxglove_bridge
+    ros2 run foxglove_bridge foxglove_bridge
