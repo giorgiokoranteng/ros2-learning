@@ -62,7 +62,8 @@ class MySubscriber(Node):
 
 ## Type 3 — Subscriber + Publisher (reactive)
 
-class MyReactiveNode(Node):
+    class MyReactiveNode(Node):
+    
     def __init__(self):
         super().__init__('my_reactive_node')
         self.sub = self.create_subscription(PoseStamped, '/my/input', self.on_input, 10)
