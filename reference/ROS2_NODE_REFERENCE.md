@@ -16,11 +16,12 @@
 
 ## Type 1 — Publisher only
 
-import rclpy
-from rclpy.node import Node
-from geometry_msgs.msg import PoseStamped
+    import rclpy
+    from rclpy.node import Node
+    from geometry_msgs.msg import PoseStamped
 
-class MyPublisher(Node):
+    class MyPublisher(Node):
+    
     def __init__(self):
         super().__init__('my_publisher')
         self.pub = self.create_publisher(PoseStamped, '/my/topic', 10)
@@ -36,7 +37,7 @@ class MyPublisher(Node):
         self.pub.publish(msg)
         self.state += 1.0
 
-def main():
+    def main():
     rclpy.init()
     node = MyPublisher()
     try:
@@ -48,7 +49,8 @@ def main():
 
 ## Type 2 — Subscriber only
 
-class MySubscriber(Node):
+    class MySubscriber(Node):
+    
     def __init__(self):
         super().__init__('my_subscriber')
         self.sub = self.create_subscription(PoseStamped, '/my/topic', self.on_message, 10)
@@ -86,7 +88,7 @@ class MySubscriber(Node):
 
 ## Type 4 — Controller
 
-class MyController(Node):
+    class MyController(Node):
     def __init__(self):
         super().__init__('my_controller')
         self.sub_current = self.create_subscription(PoseStamped, '/current', self.on_current, 10)
