@@ -1,18 +1,18 @@
-# ROS 2 Python Node — Reference Card
+## ROS 2 Python Node — Reference Card
 
 ## Before writing any node — ask these four questions
 
-# 1. What does this node SEND?       → publishers
-# 2. What does this node RECEIVE?    → subscribers
-# 3. What does it need to REMEMBER?  → internal state (self.xxx)
-# 4. What DRIVES its behavior?       → timer (periodic) or subscriber (reactive)
+    # 1. What does this node SEND?       → publishers
+    # 2. What does this node RECEIVE?    → subscribers
+    # 3. What does it need to REMEMBER?  → internal state (self.xxx)
+    # 4. What DRIVES its behavior?       → timer (periodic) or subscriber (reactive)
 
 ## When to use which type
 
-# sensor / fake data publisher  → Type 1 (publisher only)
-# logger / monitor / checker    → Type 2 (subscriber only)
-# actuator / simulator          → Type 3 (sub + pub + timer)
-# controller / estimator        → Type 4 (multi-sub + pub + timer)
+    # sensor / fake data publisher  → Type 1 (publisher only)
+    # logger / monitor / checker    → Type 2 (subscriber only)
+    # actuator / simulator          → Type 3 (sub + pub + timer)
+    # controller / estimator        → Type 4 (multi-sub + pub + timer)
 
 ## Type 1 — Publisher only
 
