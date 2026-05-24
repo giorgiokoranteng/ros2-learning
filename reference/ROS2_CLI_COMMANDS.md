@@ -7,8 +7,11 @@ docker exec -it ros2 bash
 
 ## Build
 cd /root/ros2_ws
+
 colcon build --packages-select <pkg> --symlink-install
+
 source install/setup.bash
+
 ros2 run <package> <node>
 
 ## Nodes
